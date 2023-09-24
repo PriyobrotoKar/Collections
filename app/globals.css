@@ -3,60 +3,36 @@
 @tailwind utilities;
 
 body {
-    background-color: #C5BEB4;
-}
-
-@layer base {
-    @font-face {
-        font-family: Canopee;
-        font-weight: 400;
-        src: url(/fonts/616fd1dd00cf6c70f978fc69_Canopee.ttf) format("ttf");
-    }
-
-    @font-face {
-        font-family: Editorial;
-        font-weight: 400;
-        src: url(/fonts/EditorialNew-Regular.ttf) format("ttf");
-    }
+  background-color: #c5beb4;
 }
 
 .auth-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.auth-wrapper h1 {
-    font-family: Canopee;
-}
-
-.auth-wrapper p {
-    font-family: Editorial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .auth-img {
-    animation: animate 10s ease-in-out infinite;
-    transition: all 1s ease-in-out;
+  animation: animate 10s ease-in-out infinite;
+  transition: all 1s ease-in-out;
 }
 
 @keyframes animate {
-    0% {
-        border-radius: 30% 70% 40% 60% / 70% 40% 60% 30%;
-    }
-    25% {
-        border-radius: 60% 30% 70% 40% / 40% 70% 30% 60%;
-    }
-    50% {
-        border-radius: 30% 70% 40% 60% / 70% 40% 60% 30%;
-    }
-    75% {
-        border-radius: 60% 30% 70% 40% / 40% 70% 30% 60%;
-    }
-    100% {
-        border-radius: 30% 70% 40% 60% / 70% 40% 60% 30%;
-    }
+  0% {
+    border-radius: 30% 70% 40% 60% / 70% 40% 60% 30%;
+  }
+  25% {
+    border-radius: 60% 30% 70% 40% / 40% 70% 30% 60%;
+  }
+  50% {
+    border-radius: 30% 70% 40% 60% / 70% 40% 60% 30%;
+  }
+  75% {
+    border-radius: 60% 30% 70% 40% / 40% 70% 30% 60%;
+  }
+  100% {
+    border-radius: 30% 70% 40% 60% / 70% 40% 60% 30%;
+  }
 }
-
-
