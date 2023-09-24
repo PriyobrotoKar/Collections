@@ -9,7 +9,7 @@ body {
 @layer base {
     @font-face {
         font-family: Canopee;
-        font-weight: 300;
+        font-weight: 400;
         src: url(/fonts/616fd1dd00cf6c70f978fc69_Canopee.ttf) format("ttf");
     }
 
