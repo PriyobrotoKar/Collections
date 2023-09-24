@@ -10,7 +10,7 @@ body {
     @font-face {
         font-family: Canopee;
         font-weight: normal;
-        src: url(/fonts/Canopee.otf) format("otf");
+        src: url(/fonts/Canopee.ttf) format("otf");
     }
 
     @font-face {
