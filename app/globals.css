@@ -8,9 +8,9 @@ body {
 
 @layer base {
     @font-face {
-        font-family: CanopeeReal;
+        font-family: Canopee;
         font-weight: normal;
-        src: url(/fonts/Canopee.ttf) format("otf");
+        src: url(/fonts/616fd1dd00cf6c70f978fc69_Canopee.ttf) format("ttf");
     }
 
     @font-face {
