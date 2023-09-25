@@ -4,6 +4,8 @@
 
 body {
   background-color: #c5beb4;
+  mix-blend-mode: multiply; 
+  pointer-events: none;
 }
 
 .auth-wrapper {

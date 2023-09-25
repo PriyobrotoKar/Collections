@@ -8,6 +8,37 @@ const authOptions = {
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         }),
     ],
+    callbacks: {
+        async signIn({ user, account}) {
+            
+            if (account.provider === 'google' ) {
+
+                const { email, name } = user;
+
+                try {
+                   const res =  await fetch("https://localhost:3000/api/user", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            name, email
+                        })
+                    });
+
+                    if (res.ok) {
+                        return user;
+                    }
+
+                } catch (error) {
+                    console.log(error);
+                }
+
+            }
+            
+            return user;
+        }
+    }
 };
 
 const handler = NextAuth(authOptions);
