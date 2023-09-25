@@ -16,7 +16,7 @@ const authOptions = {
                 const { email, name } = user;
 
                 try {
-                   const res =  await fetch("https://localhost:3000/api/user", {
+                   const res =  await fetch("https://collections-lemon.vercel.app/api/user", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
