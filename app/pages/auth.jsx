@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { signIn, useSession } from "next-auth/react";
+import { useSession } from 'next-auth/react';
 
 import "../globals.css";
 import Image from "next/image";
@@ -8,10 +8,11 @@ import Image from "next/image";
 import Thumbnail from "../../public/imgs/thumbnail.png";
 import Arrow from "../../public/imgs/arrow.svg";
 
+import { signIn } from "next-auth/react";
+
 export default function Auth() {
 
-  const session = useSession();
-  console.log(session);
+  const { status, data: session } = useSession();
 
   return (
     <main className="lg:ml-[32rem] auth-wrapper">
@@ -39,9 +40,14 @@ export default function Auth() {
         Collections.bio respects your privacy and does not use your account data
         anywhere. We only use your Google account’s icon for personalization.
       </p>
-      <button onClick={()=>signIn("google")} className="hover:bg-[#161616] rounded-[4.56px] max-w-[325px] w-[100%] bg-black pl-[42px] pt-[12px] pb-[12px] mt-[18px] pr-[42px] text-white sm:max-w-[562px] sm:text-[26.08px] lg:max-w-[550px] xl:max-w-[666px]">
+      <button onClick={() => signIn("google")} className="hover:bg-[#161616] rounded-[4.56px] max-w-[325px] w-[100%] bg-black pl-[42px] pt-[12px] pb-[12px] mt-[18px] pr-[42px] text-white sm:max-w-[562px] sm:text-[26.08px] lg:max-w-[550px] xl:max-w-[666px]">
         Click here to login with google
       </button>
+
+      {status === "authenticated" ? (
+        console.log("Successfully Authenticated:\n" + "Name: " + session?.user?.name + "\n" +  "Email: " + session?.user?.email)
+      ) : null}
+
     </main>
   );
 }
