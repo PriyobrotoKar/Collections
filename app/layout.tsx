@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import Provider from "./auth/session";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${Canopee.variable} ${Editorial.variable}`}>
       <body>
-        <Provider>
           {children}
-        </Provider>
       </body>
     </html>
   );
