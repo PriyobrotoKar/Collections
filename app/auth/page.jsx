@@ -2,9 +2,8 @@
 
 import "../globals.css";
 
-import { useSession } from 'next-auth/react';
+import { useSession, signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { signIn } from "next-auth/react";
 
 export default function Auth() {
 
@@ -17,11 +16,7 @@ export default function Auth() {
         <button onClick={() => signIn("google")} className="text-white hover:text-[#D9D9D9]">
           Click here to login with Google
         </button>
-      ) : null}
-
-      {status === "authenticated" ? (
-        router.push("/explore")
-      ) : null}
+      ) : router.push("/explore") }
     </main>
   );
 }
