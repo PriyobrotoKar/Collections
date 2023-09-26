@@ -9,23 +9,22 @@ export default function Auth() {
   const { status, data: session } = useSession();
 
   return (
-    <main>
-
-      <h1>
-        sign in and start showcasing!
-      </h1>
-      <p>
-        Collections.bio respects your privacy and does not use your account data
-        anywhere. We only use your Google account’s icon for personalization.
-      </p>
-      <button onClick={() => signIn("google")}>
-        Click here to login with google
+    <main className="flex flex-col items-center justify-center h-screen">
+      <button onClick={() => signIn("google")} className="text-white hover:text-[#D9D9D9]">
+        Click here to login with Google
       </button>
 
       {status === "authenticated" ? (
-        console.log("Successfully Authenticated:\n" + "Name: " + session?.user?.name + "\n" +  "Email: " + session?.user?.email)
+        console.log(
+          "Successfully Authenticated:\n" +
+          "Name: " +
+          session?.user?.name +
+          "\n" +
+          "Email: " +
+          session?.user?.email
+        )
       ) : null}
-
     </main>
+
   );
 }
