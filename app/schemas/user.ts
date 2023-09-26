@@ -1,6 +1,6 @@
-import mongoose, { models, Schema } from "mongoose";
+import mongoose from "mongoose";
 
-const UserCredentials = new Schema(
+const UserCredentialsSchema = new mongoose.Schema(
     {
         email: {
             type: String,
@@ -14,5 +14,6 @@ const UserCredentials = new Schema(
     { timestamps: true }
 );
 
-const Credentials = models.UserCredentials || mongoose.model("userCredentials", UserCredentials);
+const Credentials = mongoose.models.UserCredentials || mongoose.model("UserCredentials", UserCredentialsSchema);
+
 export default Credentials;
