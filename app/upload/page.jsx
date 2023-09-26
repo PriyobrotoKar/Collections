@@ -12,7 +12,7 @@ export default function Upload() {
             {status === "authenticated" ? (
                 <h1 className='text-white'>Upload</h1>
             ) : (
-                router.push("/auth")
+                <h1 className='text-white'>Oops, it seems like you are not signed in</h1>
             )} 
         </main>
     );
