@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const UserCredentialsSchema = new mongoose.Schema(
+const UserCredentials = new mongoose.Schema(
     {
         email: {
             type: String,
@@ -10,10 +10,20 @@ const UserCredentialsSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        username: {
+            type: String,
+            default: "na",
+            required: true
+        },
+        badges: {
+            type: String,
+            default: "na",
+            required: true
+        }
     },
     { timestamps: true }
 );
 
-const Credentials = mongoose.models.UserCredentials || mongoose.model("UserCredentials", UserCredentialsSchema);
+const Credentials = mongoose.models.UserCredentials || mongoose.model("UserCredentials", UserCredentials);
 
 export default Credentials;
