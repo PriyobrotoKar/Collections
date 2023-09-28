@@ -8,5 +8,6 @@ export async function POST(request) {
     const { name, email } = await request.json();
     await Connection();
     await Credentials.create({ name, email });
+
     return NextResponse.json({ message: "User Registered" }, { status: 201 });
 }

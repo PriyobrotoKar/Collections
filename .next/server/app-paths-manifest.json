@@ -1,9 +1,1 @@
-{
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/upload/page": "app/upload/page.js",
-  "/settings/page": "app/settings/page.js",
-  "/auth/page": "app/auth/page.js",
-  "/explore/page": "app/explore/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js"
-}
+{}
